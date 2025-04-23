@@ -25,6 +25,7 @@ This repo using Icarus Verilog and GTKWave to simulate the Verilog design .
         `make all`
  ## Instruction Set ##
    ![image](https://github.com/user-attachments/assets/8618a86c-a70c-4ef1-8984-68b8e973a6cd)
+   Source : (https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html )
 
 
   ## DataPath ##
