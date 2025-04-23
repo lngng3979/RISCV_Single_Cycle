@@ -7,7 +7,7 @@ This repo using Icarus Verilog and GTKWave to simulate the Verilog design .
  ## Project Structure
 `   /RISCV_Single_Cycle`
 `    ├──/IMEM`
-`        `├── IMEM.v                     # Verilog implementation of the IMEM module`
+`        ├── IMEM.v                     # Verilog implementation of the IMEM module`
 `        ├── IMEM_tb.v                  # Verilog testbench for IMEM using Verilator`
 `        ├── a.out                      # Execute file`
 `        ├── Makefile                   # Makefile to automate build and simulation process`
