@@ -12,28 +12,33 @@ module Data_Memory(
 
 reg [31:0] Memory [255:0];
 integer f;
-wire [31:0] ram_addr=addr[31:0];
+wire [2:0] ram_addr=addr[2:0];
 initial
  begin
   $readmemb("./test.data", Memory);
   
-  f = $fopen("./test.o");
-  $fmonitor(f, "time = %d\n", $time, 
-  "\tmemory[0] = %b\n", Memory[0],   
-  "\tmemory[1] = %b\n", Memory[1],
-  "\tmemory[2] = %b\n", Memory[2],
-  "\tmemory[3] = %b\n", Memory[3],
-  "\tmemory[4] = %b\n", Memory[4],
-  "\tmemory[5] = %b\n", Memory[5],
-  "\tmemory[6] = %b\n", Memory[6],
-  "\tmemory[7] = %b\n", Memory[7]);
-  #320;
+  // Open file for logging memory content
+  f = $fopen("./test.o", "w");
+  
+  // Log memory contents (first time)
+  $fdisplay(f, "time = %d\n", $time);
+  $fdisplay(f, "\tmemory[0] = %b", Memory[0]);
+  $fdisplay(f, "\tmemory[1] = %b", Memory[1]);
+  $fdisplay(f, "\tmemory[2] = %b", Memory[2]);
+  $fdisplay(f, "\tmemory[3] = %b", Memory[3]);
+  $fdisplay(f, "\tmemory[4] = %b", Memory[4]);
+  $fdisplay(f, "\tmemory[5] = %b", Memory[5]);
+  $fdisplay(f, "\tmemory[6] = %b", Memory[6]);
+  $fdisplay(f, "\tmemory[7] = %b", Memory[7]);
+
+  #320; // Wait for 320 time units before closing the file
   $fclose(f);
+ 
  end
  
  always @(posedge clk) begin
   if (!MemRW)   //When MemRW =0 , we want to write data
-   Memory[ram_addr] <= DataR;
+   Memory[ram_addr] <= DataW;
  end
  assign DataR = (MemRW ==1'b1) ? Memory[ram_addr]: 32'd0; 
 
