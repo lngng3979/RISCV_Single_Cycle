@@ -18,8 +18,9 @@ This repo using Icarus Verilog and GTKWave to simulate the Verilog design .
         ├── a.out                      # Execute file
         ├── Makefile                   # Makefile to automate build and simulation process
         ├── DMEM.vcd                   # (Generated) VCD waveform file
-└── README.md```
+└── README.md
+```
 
-  ## View Waveform  
+  **View Waveform **
         `make all`
   
