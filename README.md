@@ -23,4 +23,11 @@ This repo using Icarus Verilog and GTKWave to simulate the Verilog design .
 
   ## View Waveform ##
         `make all`
+ ## Instruction Set ##
+   ![image](https://github.com/user-attachments/assets/8618a86c-a70c-4ef1-8984-68b8e973a6cd)
+
+
+  ## DataPath ##
+  ![image](https://github.com/user-attachments/assets/c50c9c13-ff4e-4365-94fc-7e6216ceea13)
+
   
