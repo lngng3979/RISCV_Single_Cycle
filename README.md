@@ -12,12 +12,15 @@ This repo using Icarus Verilog and GTKWave to simulate the Verilog design .
         ├── a.out                      # Execute file
         ├── Makefile                   # Makefile to automate build and simulation process
         ├── IMEM.vcd                   # (Generated) VCD waveform file
+        ├── test.prog                  # .bin file used
 ├── /DMEM
         ├── DMEM.v                     # Verilog implementation of the DMEM module
         ├── DMEM_tb.v                  # Verilog testbench for DMEM using Verilator
         ├── a.out                      # Execute file
         ├── Makefile                   # Makefile to automate build and simulation process
         ├── DMEM.vcd                   # (Generated) VCD waveform file
+        ├── test.data                  # binary file
+        ├── test.o                     # .bin file
 └── README.md
 ```
 
